@@ -8,5 +8,6 @@ sf::Vector2f GetCorrectedMousePos(sf::RenderWindow& window) { //I'm clever as F
 }
 
 namespace Global {
-	bool Global::NeedUpdate = false;
+	bool NeedUpdate = false;
+	bool waitingForinput = false;
 }

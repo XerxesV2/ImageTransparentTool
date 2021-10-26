@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "TextBox.hpp"
 
 #define WINDOWS_X 1920
 #define WINDOWS_Y 1080
@@ -11,6 +12,7 @@ public:
 
 	void Update(sf::RenderWindow &);
 	int GetValue();
+	void setValue(int val);
 	void Draw(sf::RenderTarget &);
 
 	~Slider();
@@ -20,6 +22,7 @@ private:
 	bool holding = false;
 	sf::RectangleShape bar;
 	sf::CircleShape button;
-	sf::Text valueText;
+	//sf::Text valueText;
+	TextBox valueTextBox;
 };
 

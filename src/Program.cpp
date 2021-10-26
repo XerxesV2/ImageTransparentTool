@@ -141,6 +141,8 @@ void Program::FileManagement()
 
 void Program::HandleEvents()
 {
+	if (Global::waitingForinput) return;
+
 	while (this->window.pollEvent(event)) {
 		if (sf::Event::Closed == event.type) {
 			this->window.close();
